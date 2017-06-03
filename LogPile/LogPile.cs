@@ -52,23 +52,47 @@ public class LogPile {
 		WriteLine("INFO", message);
 	}		
 
+	public static void InfoFormat(string message, params object[] args) {		
+		WriteLine("INFO", string.Format(message, args));
+	}
+	
 	public static void Debug(string message) {		
 		WriteLine("DEBUG", message);
+	}	
+
+	public static void DebugFormat(string message, params object[] args) {		
+		WriteLine("DEBUG", string.Format(message, args));
 	}	
 
 	public static void Warn(string message) {		
 		WriteLine("WARN", message);
 	}	
 
+	public static void WarnFormat(string message, params object[] args) {		
+		WriteLine("WARN", string.Format(message, args));
+	}	
+	
 	public static void Fatal(string message) {		
 		WriteLine("FATAL", message);
 	}	
 
+	public static void FatalFormat(string message, params object[] args) {		
+		WriteLine("FATAL", string.Format(message, args));
+	}	
+	
 	public static void Error(string message) {		
 		WriteLine("ERROR", message);
 	}	
 
+	public static void ErrorFormat(string message, params object[] args) {		
+		WriteLine("ERROR", string.Format(message, args));
+	}	
+	
 	public static void Custom(string level, string message) {		
 		WriteLine(level, message);
+	}
+	
+	public static void CustomFormat(string level, string message, params object[] args) {		
+		WriteLine(level, string.Format(message, args));
 	}
 }
